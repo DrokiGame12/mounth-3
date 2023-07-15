@@ -99,7 +99,6 @@ startButton.addEventListener('click', () => {
 			//		Упрощение кода	
 			stopButton.addEventListener('click', () => stopTimer(timer))
 			resetButton.addEventListener('click', () => resetTimer(timer))
-
 			//	Показывает пользователю, 
 			// в конце т.к. при нажатии на кнопку "ресет" он сбрасывает значения
 			minNum.innerHTML = numTime(min)
