@@ -1,0 +1,28 @@
+.btn-block {
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.red {
+    background-color: red;
+}
