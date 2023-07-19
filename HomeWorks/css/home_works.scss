@@ -1,0 +1,130 @@
+
+/* GMAIL BLOCK */
+
+.gmail_block {
+	background: black;
+	padding: 100px 0;
+}
+
+.inner_gmail_block {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	height: 300px;
+	border-radius: 20px;
+	align-items: center;
+}
+
+.form_gmail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_gmail button {
+	width: 100%;
+	margin: 20px 0;
+}
+
+/* MOVE BLOCK */
+
+.move_block {
+	background: black;
+	padding: 100px 0;
+	position: relative;
+}
+
+.parent_block {
+	height: 500px;
+	width: 500px;
+	border: 2px solid orange;
+	position: relative;
+	margin: 0 auto;
+}
+
+.child_block {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: red;
+}
+
+.inner_move_block {
+	margin-top: 10px;
+}
+
+/* STOP WATCH */
+
+.time {
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 80px;
+	height: 100px;
+	width: 100%;
+	border-bottom: 1px solid orange;
+	margin-top: 40px;
+}
+
+.time_block {
+	display: flex;
+	width: 500px;
+	justify-content: space-between;
+}
+
+.stopwatch {
+	padding: 100px 0;
+	background: black;
+}
+
+.time_buttons {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* JSON */
+
+.json {
+	color: white;
+	background-color: black;
+	padding: 100px 0;
+	position: relative;
+
+	&_block {
+		padding-top: 50px;
+
+		&_users {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 20px;
+
+			&_user {
+				display: flex;
+				justify-content: space-around;
+				flex-direction: column;
+				align-items: center;
+				border: solid 2px orange;
+				border-radius: 20px;
+
+				&_img {
+					margin: 20px;
+					height: 150px;
+					width: 150px;
+					border: solid 2px orange;
+					border-radius: 100px;
+				}
+
+				&_name {
+					font-size: 30px;
+				}
+
+				&_age {
+					margin: 20px;
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}

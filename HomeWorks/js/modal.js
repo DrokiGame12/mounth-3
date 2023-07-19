@@ -27,11 +27,10 @@ const scrollOpenModal = () => {
     }
 }
 
+// document.addEventListener('scroll', scrollOpenModal)
+// setTimeout(() => openModal(), 10000)
 modalTrigger.onclick = () => openModal()
 closeModalButton.onclick = () => closeModal()
 modal.onclick = (event) => {
 	event.target === modal && closeModal() 
 }
-document.addEventListener('scroll', scrollOpenModal)
-
-setTimeout(() => openModal(), 10000)

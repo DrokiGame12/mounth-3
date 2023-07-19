@@ -1,0 +1,63 @@
+[
+	{
+		"img": "../image/W.png",
+		"name": "Will"
+	},
+
+	{
+		"img": "https://bogatyr.club/uploads/posts/2023-02/thumbs/1677456584_bogatyr-club-p-avatarki-na-chernom-fone-foni-3.jpg",
+		"name": "Dave",
+		"age": 21
+	},
+
+	{
+		"name": "Peter",
+		"age": 25
+	},
+
+	{
+		"img": "https://catherineasquithgallery.com/uploads/posts/2021-02/thumbs/1614320201_50-p-raduzhnii-fon-kartinki-59.jpg",
+		"name": "Liam",
+		"age": 11
+	},
+
+	{
+		"img": "https://i.etsystatic.com/34968651/r/il/0a2300/4946054758/il_300x300.4946054758_e4vc.jpg",
+		"name": "Miles",
+		"age": 17
+	},
+
+	{
+		"img": "https://android-obzor.com/wp-content/uploads/2022/02/3-4.jpg",
+		"name": "Connor",
+		"age": 19
+	},
+
+	{
+		"img": "../image/Droki.png",
+		"name": "Droki",
+		"age": 14
+	},
+
+	{
+		"img": "https://cojo.ru/wp-content/uploads/2022/12/krasivyi-krug-1-2.webp",
+		"name": "Eli",
+		"age": 23
+	},
+
+	{
+		"img": "https://freesvg.org/img/abstract-user-flat-4.png",
+		"name": "Marlin"
+	},
+
+	{
+		"img": "https://freesvg.org/img/abstract-user-flat-4.png",
+		"name": "Scott",
+		"age": 20
+	},
+
+	{
+		"img": "https://freesvg.org/img/abstract-user-flat-4.png",
+		"name": "Victor"
+	}
+]

@@ -139,3 +139,29 @@ function resetTimer(timer){
 	timerIsWork = false
 	clearInterval(timer)
 }
+
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								Home Work 3								//
+//																		//
+//////////////////////////////////////////////////////////////////////////
+
+const userRequest = new XMLHttpRequest()
+userRequest.open('GET', '../data/users.json')
+userRequest.setRequestHeader('Content-type', 'application/json')
+userRequest.send()
+userRequest.addEventListener('load', () => {
+	const userData = JSON.parse(userRequest.response)
+	userData.forEach(user => {
+		const usersBlock = document.querySelector('#users')
+		const newUser = document.createElement('div')
+		newUser.innerHTML = `
+			<div class="json_block_users_user">
+				<img src="${user.img !== undefined ? user.img : "https://freesvg.org/img/abstract-user-flat-4.png"}" alt="" class="json_block_users_user_img">
+				<span class="json_block_users_user_name">${user.name}</span>
+				<span class="json_block_users_user_age">${user.age !== undefined ? user.age : "???"}</span>
+			</div>
+			`
+		usersBlock.append(newUser)
+	})
+})
