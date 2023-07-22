@@ -160,8 +160,16 @@ userRequest.addEventListener('load', () => {
 				<img src="${user.img !== undefined ? user.img : "https://freesvg.org/img/abstract-user-flat-4.png"}" alt="" class="json_block_users_user_img">
 				<span class="json_block_users_user_name">${user.name}</span>
 				<span class="json_block_users_user_age">${user.age !== undefined ? user.age : "???"}</span>
-			</div>
-			`
+			</div>`
 		usersBlock.append(newUser)
 	})
+})
+
+const text = new XMLHttpRequest()
+userRequest.open('GET', '../data/text.json')
+userRequest.setRequestHeader('Content-type', 'application/json')
+userRequest.send()
+userRequest.addEventListener('load', () => {
+	const textData = JSON.parse(userRequest.response)
+	console.log(textData.text);
 })

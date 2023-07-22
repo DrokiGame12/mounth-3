@@ -34,7 +34,7 @@
 .parent_block {
   height: 500px;
   width: 500px;
-  border: 2px solid orange;
+  border: 2px solid cyan;
   position: relative;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  background: red;
+  background: yellow;
 }
 
 .inner_move_block {
@@ -58,7 +58,7 @@
   font-size: 80px;
   height: 100px;
   width: 100%;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid cyan;
   margin-top: 40px;
 }
 
@@ -100,14 +100,14 @@
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  border: solid 2px orange;
+  border: solid 2px cyan;
   border-radius: 20px;
 }
 .json_block_users_user_img {
   margin: 20px;
   height: 150px;
   width: 150px;
-  border: solid 2px orange;
+  border: solid 2px cyan;
   border-radius: 100px;
 }
 .json_block_users_user_name {

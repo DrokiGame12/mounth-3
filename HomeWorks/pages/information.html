@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Information</title>
+	<meta charset="UTF-8">
+	<title>Information</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/core.css">
 	<link rel="stylesheet" href="../css/information.css">
@@ -10,71 +10,174 @@
 <body>
 
 <div class="wrapper">
-    <div class="header">
-        <div class="container">
-            <div class="header_inner">
-                <a href="../index.html">
-                    <div class="header_inner_logotype">
-                        <h2>JavaScript</h2>
-                    </div>
-                </a>
-                <ul class="header_inner_menu">
-                    <li class="header_inner_menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="header_inner_menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="header_inner_menu_link">
-                        <a href="../pages/information.html">Information</a>
-                    </li>
-                </ul>
-                <button class="btn" id="btn-get">Click me!</button>
-            </div>
-        </div>
-    </div>
+	<div class="header">
+		<div class="container">
+			<div class="header_inner">
+				<a href="../index.html">
+					<div class="header_inner_logotype">
+						<h2>JavaScript</h2>
+					</div>
+				</a>
+				<ul class="header_inner_menu">
+					<li class="header_inner_menu_link">
+						<a href="../pages/home_works.html">Home Works</a>
+					</li>
+					<li class="header_inner_menu_link">
+						<a href="../pages/lessons.html">Lessons</a>
+					</li>
+					<li class="header_inner_menu_link">
+						<a href="../pages/information.html">Information</a>
+					</li>
+				</ul>
+				<button class="btn" id="btn-get">Click me!</button>
+			</div>
+		</div>
+	</div>
 	<div class="information">
 		<div class="container">
-			<h2>Class work 2</h2>
+			<div class="information_">
+				
+			</div>
+
+			<h2>Time</h2>
 			<div class="information_block">
 				<div class="information_block_content">
-					<a href="https://www.youtube.com" target="_blank"><h2>setTimeout ( function, time )</h2></a>
+					<a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous" target="_blank">
+						<h2>Асинхронность</h2>
+					</a>
 					<span>
-						<b>setTimeout</b> -  позволяет вызвать функцию <b>один раз</b> через определённый интервал времени.
+						<p><b>Асинхронность</b> — функция вызывается <b>через время,</b> мы не знаем, когда она отработает.</p>
+						<br>
+						<p><b>Двойная асинхронность</b> — используется <b>onclick</b>.</p>
+						<br>
+						<p><b>Асинхронная функция</b> — фунция, которая начнёт своё выполнение кода на <b>заднем фоне.</b></p>
 					</span>
 				</div>
+
 				<div class="information_block_content">
-					<a href="https://www.youtube.com" target="_blank"><h2>setInterval ( function, time )</h2></a>
+					<a href="" target="_blank">
+						<h2>Синхронность</h2>
+					</a>
 					<span>
-						<b>TEXT</b> - text text text text
+						<p><b>Синхронность</b> — функция вызывается <b>мгновенно</b> без задержек.</p>
+						<br>
+						<p><b>Синхронная функция</b> — фунция, которая начнёт своё выполнение кода <b>сразу</b>.</p>
 					</span>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://developer.mozilla.org/ru/docs/Web/API/setTimeout" target="_blank">
+						<h2>setTimeout ( function, time )</h2>
+					</a>
+					<span>
+						<p><b>setTimeout</b> —  позволяет вызвать функцию <b>один раз</b> через определённый интервал времени.</p>
+						<br>
+						<p><b>function</b> — функция, которая вызовется <b>один раз</b>.</p>
+						<br>
+						<p><b>time</b> — интервал времени, через который вызоветься функция. <b>(1000 = 1 sec)</b></p>
+					</span>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://learn.javascript.ru/settimeout-setinterval" target="_blank">
+						<h2>setInterval ( function, time )</h2>
+					</a>
+					<span>
+						<p><b>setInterval</b> — позволяет вызывать функцию <b>регулярно</b>, повторяя вызов через определённый интервал времени.</p>
+						<br>
+						<p><b>function</b> — функция, которая будет вызываться <b>регулярно</b>.</p>
+						<br>
+						<p><b>time</b> — интервал времени, через который будет вызываться функция. <b>(1000 = 1 sec)</b><br></p>
+					</span>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout" target="_blank">
+						<h2>clearTimeout ( timer )</h2>
+					</a>
+					<span>
+						<p><b>clearTimeout</b> —  позволяет <b>остановить</b> таймер.</p>
+						<br>
+						<p><b>timer</b> — таймер, который нужно <b>остановить</b>.</p>
+					</span>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/clearInterval" target="_blank">
+						<h2>clearInterval ( timer )</h2>
+					</a>
+					<span>
+						<p><b>clearInterval</b> —  позволяет <b>остановить</b> таймер.</p>
+						<br>
+						<p><b>timer</b> — таймер, который нужно <b>остановить</b>.</p>
+					</span>
+				</div>
+			</div>
+
+
+			<h2>class List</h2>
+			<div class="information_block">
+				<div class="information_block_content">
+					<a href="https://doka.guide/js/element-classlist/#classlist.add" target="_blank">
+						<h2>add ( class )</h2>
+					</a>
+					<p><b>add</b> — метод, используемый для <b>добавления класса</b> к элементу.</p>
+					<br>
+					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>добавится</b>.</p>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://doka.guide/js/element-classlist/#classlist.remove" target="_blank">
+						<h2>remove ( class )</h2>
+					</a>
+					<p><b>remove</b> — метод, используемый для <b>удаления класса</b> у элемента.</p>
+					<br>
+					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>удалится</b>.</p>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://doka.guide/js/element-classlist/#classlist.remove" target="_blank">
+						<h2>replace ( class )</h2>
+					</a>
+					<p><b>replace</b> — метод, используемый для <b>замены класса</b> у элемента.</p>
+					<br>
+					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>заменится</b>.</p>
+				</div>
+
+				<div class="information_block_content">
+					<a href="https://doka.guide/js/element-classlist/#:~:text=remove()&text=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82%D1%81%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0,%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D1%83%20%D1%81%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BC%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0." target="_blank">
+						<h2>contains ( class )</h2>
+					</a>
+					<p><b>contains</b> — метод, используемый для <b>проверки наличия</b> класса у элемента.</p>
+					<br>
+					<p><b>class</b> — строка с <b>именем класса</b>, наличие которого нужно <b>проверить</b>.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-    <div class="footer">
-        <div class="container">
-            <a href="#">
-                <div class="inner_footer">
-                    <h2>Made by N.Akel</h2>
-                </div>
-            </a>
-        </div>
-    </div>
+	<div class="footer">
+		<div class="container">
+			<a href="#">
+				<div class="inner_footer">
+					<h2>Made by N.Akel</h2>
+				</div>
+			</a>
+		</div>
+	</div>
 </div>
 
 <div class="modal">
-    <div class="modal_dialog">
-        <div class="modal_dialog_content">
-            <form action="#">
-                <div class="modal_dialog_content_close">&times;</div>
-                <div class="modal_dialog_content_title">Мы свяжемся с вами как можно быстрее!</div>
-                <input required placeholder="Ваше имя" name="name" type="text" class="modal_dialog_content_input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_dialog_content_input">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
-            </form>
-        </div>
-    </div>
+	<div class="modal_dialog">
+		<div class="modal_dialog_content">
+			<form action="#">
+				<div class="modal_dialog_content_close">&times;</div>
+				<div class="modal_dialog_content_title">Мы свяжемся с вами как можно быстрее!</div>
+				<input required placeholder="Ваше имя" name="name" type="text" class="modal_dialog_content_input">
+				<input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_dialog_content_input">
+				<button class="btn btn_dark btn_min">Перезвонить мне</button>
+			</form>
+		</div>
+	</div>
 </div>
 
 </body>

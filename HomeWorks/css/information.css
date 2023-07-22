@@ -2,27 +2,30 @@
   padding: 100px 0;
   background: black;
 }
-.information_block {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: 50px;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-}
-.information_block_content {
-  padding: 10px;
-  border: solid 2px orange;
-  border-radius: 15px;
-}
-.information_block_content h2 {
-  text-transform: none;
-  color: orange;
-}
-.information_block_content span {
-  margin-top: 30px;
+.information h2 {
   color: white;
 }
-.information_block_content span b {
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
+.information_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px;
+  gap: 50px;
+}
+.information_block_content {
+  padding: 20px;
+  border: solid 2px cyan;
+  border-radius: 15px;
+  color: white;
+}
+.information_block_content h2 {
+  font-size: 32px;
+  text-transform: none;
+  color: cyan;
+  margin: 20px 0px;
+}
+.information_block_content h2:hover {
+  color: rgb(150, 255, 255);
+}
+.information_block_content p b {
+  color: cyan;
 }/*# sourceMappingURL=information.css.map */

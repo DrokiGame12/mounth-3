@@ -25,7 +25,7 @@
 			font-size: 22px;
 			height: 60px;
 			width: fit-content;
-			background: orange;
+			background: cyan;
 			padding: 8px;
 			color: white;
 			border-radius: 5px;
@@ -40,7 +40,7 @@
 			width: 600px;
 			
 			&_link a {
-				color: orange;
+				color: cyan;
 				text-transform: uppercase;
 			}
 			
@@ -68,7 +68,7 @@
 
 .btn-color {
 	border-radius: 20px;
-	border-color: white !important;
+	border-color: cyan !important;
 }
 
 /* FOOTER */
@@ -87,7 +87,7 @@
 
 .footer h2 {
 	text-transform: uppercase;
-	color: #F79300;
+	color: cyan;
 	font-weight: 600;
 }
 
@@ -104,7 +104,7 @@
 	width: 100%;
 	height: 300px;
 	overflow: hidden;
-	border: 3px solid orange;
+	border: 3px solid cyan;
 	border-radius: 20px;
 	display: flex;
 	align-items: center;
@@ -142,7 +142,7 @@
 }
 
 .slide_card a {
-    color: orange;
+    color: cyan;
     text-decoration: underline;
 }
 
@@ -181,7 +181,7 @@
 			width: 100%;
 			padding: 40px;
 			background-color: black;
-			border: 2px solid orange;
+			border: 2px solid cyan;
 			border-radius: 4px;
 			max-height: 80vh;
 			overflow-y: auto;

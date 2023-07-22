@@ -19,9 +19,9 @@ body {
     height: 50px;
     font-size: 20px;
     cursor: pointer;
-    border: 1px solid orange;
+    border: 1px solid cyan;
     background: black;
-    color: orange;
+    color: cyan;
 }
 
 .btn:hover {
@@ -30,7 +30,7 @@ body {
 
 .btn:active {
     background: #56585D;
-    border: 2px solid orange;
+    border: 2px solid cyan;
 }
 
 a {
@@ -53,7 +53,7 @@ h1 {
 h2 {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #2c2d2f;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -76,12 +76,12 @@ h4 {
 }
 
 strong {
-    color: #F79300;
+    color: cyan;
 }
 
 label {
     font-size: 24px;
-    color: orange;
+    color: cyan;
 }
 
 input {
@@ -89,9 +89,9 @@ input {
     height: 50px;
     font-size: 20px;
     padding-left: 5px;
-    color: orange;
+    color: cyan;
     background: black;
-    border: 2px solid orange;
+    border: 2px solid cyan;
 }
 
 .checker {
@@ -103,7 +103,7 @@ input {
     display: block;
     width: 100px;
     height: 100px;
-    background: orange;
+    background: cyan;
     color: black;
     font-size: 20px;
     text-transform: uppercase;
@@ -113,7 +113,7 @@ input {
 }
 
 .btn-slide:hover {
-    background: #b68733 !important;
+    background: darkcyan !important;
     cursor: pointer;
     color: white;
 }
