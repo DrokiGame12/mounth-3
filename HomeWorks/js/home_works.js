@@ -152,6 +152,7 @@ userRequest.setRequestHeader('Content-type', 'application/json')
 userRequest.send()
 userRequest.addEventListener('load', () => {
 	const userData = JSON.parse(userRequest.response)
+	console.log(userData);
 	userData.forEach(user => {
 		const usersBlock = document.querySelector('#users')
 		const newUser = document.createElement('div')
@@ -165,11 +166,11 @@ userRequest.addEventListener('load', () => {
 	})
 })
 
-const text = new XMLHttpRequest()
-userRequest.open('GET', '../data/text.json')
-userRequest.setRequestHeader('Content-type', 'application/json')
-userRequest.send()
-userRequest.addEventListener('load', () => {
-	const textData = JSON.parse(userRequest.response)
-	console.log(textData.text);
-})
+// const text = new XMLHttpRequest()
+// userRequest.open('GET', '../data/text.json')
+// userRequest.setRequestHeader('Content-type', 'application/json')
+// userRequest.send()
+// userRequest.addEventListener('load', () => {
+// 	const textData = JSON.parse(userRequest.response)
+// 	console.log(textData.text);
+// })

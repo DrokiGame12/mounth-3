@@ -62,3 +62,61 @@ const tabInterval = setInterval(() => {
 	nextTab >= tabs.length - 1 ?  nextTab = 0 : nextTab++ 
 }, 3000)
 
+
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								CONVERTOR								//
+//																		//
+//////////////////////////////////////////////////////////////////////////
+
+const convert = (element) => {
+	const input = document.querySelector(`.${element}`)
+	input.oninput = () => {
+		const request = new XMLHttpRequest()
+		request.open('GET', '../data/convertor.json')
+		request.setRequestHeader('Content-type', 'application/json')
+		request.send()
+		request.onload = () => {
+			const response = JSON.parse(request.response)
+			
+			//	убрать, появляется автоматически
+			const som = response.som
+			const usd = response.usd
+			const eur = response.eur
+			const gbp = response.gbp
+			const somInput = document.querySelector('.som')
+			const usdInput = document.querySelector('.usd')
+			const eurInput = document.querySelector('.eur')
+			const gbpInput = document.querySelector('.gbp')
+
+			//	автоматизировать
+			if(input.value === ''){
+				somInput.value = ''
+				usdInput.value = ''
+				eurInput.value = ''
+				gbpInput.value = ''
+			} else if(element === 'som'){
+				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
+				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
+				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
+			} else if(element === 'usd') {
+				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
+				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
+				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
+			} else if(element === 'eur') {
+				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
+				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
+				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
+			} else if(element === 'gbp') {
+				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
+				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
+				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
+			}
+		}
+	}
+}
+// убрать
+convert('som')
+convert('usd')
+convert('eur')
+convert('gbp')
