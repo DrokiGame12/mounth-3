@@ -34,3 +34,17 @@ closeModalButton.onclick = () => closeModal()
 modal.onclick = (event) => {
 	event.target === modal && closeModal() 
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//																				//
+//										REG										//
+//																				//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+// const response = fetch(url, {
+// 	method: 'POST',
+// 	headers: {},
+// 	body: ''
+// })

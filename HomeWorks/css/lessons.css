@@ -43,18 +43,10 @@
   justify-content: center;
   height: 170px;
 }
-
 .tab_content_block p {
   color: white;
   margin-top: 10px;
   text-align: justify;
-}
-
-.tab_content_items {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
 }
 
 .tab_content_item {
@@ -68,7 +60,12 @@
   display: grid;
   place-content: center;
 }
-
+.tab_content_items {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
 .tab_content_item_active {
   background: cyan;
   color: black;
@@ -113,11 +110,6 @@
 }
 
 /*------CARD SWITCHER------*/
-.card_switcher {
-  background-color: black;
-  padding: 100px 0;
-}
-
 .card {
   width: 500px;
   height: 150px;
@@ -128,19 +120,21 @@
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  transition: 0.3s;
 }
-
 .card p {
   color: cyan;
   font-size: 20px;
 }
-
 .card span {
   color: white;
   font-size: 30px;
 }
-
-.inner_card_switcher {
+.card_switcher {
+  background-color: black;
+  padding: 100px 0;
+}
+.card_inner_switcher {
   margin-top: 50px;
   display: flex;
   align-items: center;

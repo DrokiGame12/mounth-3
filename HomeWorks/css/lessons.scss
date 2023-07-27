@@ -45,19 +45,12 @@
     flex-direction: column;
     justify-content: center;
     height: 170px;
-}
 
-.tab_content_block p {
-    color: white;
-    margin-top: 10px;
-    text-align: justify;
-}
-
-.tab_content_items {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+    & p {
+        color: white;
+        margin-top: 10px;
+        text-align: justify;
+    }
 }
 
 .tab_content_item {
@@ -70,13 +63,19 @@
     cursor: pointer;
     display: grid;
     place-content: center;
-}
 
-.tab_content_item_active {
-    background: cyan;
-    color: black;
-    font-weight: 600;
-    border: 1px solid white;
+    &s {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    &_active {
+        background: cyan;
+        color: black;
+        font-weight: 600;
+        border: 1px solid white;
+    }
 }
 
 .tab_contents_block {
@@ -119,11 +118,6 @@
 
 /*------CARD SWITCHER------*/
 
-.card_switcher {
-    background-color: black;
-    padding: 100px 0;
-}
-
 .card {
     width: 500px;
     height: 150px;
@@ -134,23 +128,23 @@
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    transition: 0.3s;
+    & p {
+        color: cyan;
+        font-size: 20px;
+    }
+    & span {
+        color: white;
+        font-size: 30px;
+    }
+    &_switcher {
+        background-color: black;
+        padding: 100px 0;
+    }
+    &_inner_switcher {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
-
-.card p {
-    color: cyan;
-    font-size: 20px;
-}
-
-.card span {
-    color: white;
-    font-size: 30px;
-}
-
-.inner_card_switcher {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
