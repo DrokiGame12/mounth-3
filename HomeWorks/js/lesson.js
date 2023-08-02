@@ -128,11 +128,11 @@ const border = document.querySelector('.card')
 
 let count = 1
 
-const fetchCardById = (id = 1) => {
-	fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
-		.then(response => response.json())
-		.then(data => {
-			const color = String(data.completed === true ? 'lime':'red')
+const fetchCardById = async (id = 1) => {
+	try{
+		const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+		const data = await response.json()
+		const color = String(data.completed === true ? 'lime':'red')
 			card.innerHTML = `
 				<p>${data.title}</p>
 				<p style="color: ${color}; text-shadow: 0 0 10px ${color}">${data.completed}</p>
@@ -141,7 +141,9 @@ const fetchCardById = (id = 1) => {
 
 			border.style.border = `2px solid ${data.completed === true ? 'lime':'red'}`
 			border.style.boxShadow = `0 0 15px ${data.completed === true ? 'lime':'red'}`
-		})
+	} catch(errorName) {
+		console.error("ERROR:", errorName);
+	}
 }
 
 btnNext.onclick = () => {
