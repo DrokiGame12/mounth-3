@@ -4,56 +4,71 @@
 .gmail_block {
 	background: black;
 	padding: 100px 0;
-}
-
-.inner_gmail_block {
-	margin-top: 50px;
-	display: flex;
-	justify-content: space-evenly;
-	height: 300px;
-	border-radius: 20px;
-	align-items: center;
+	&_inner {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-evenly;
+		height: 300px;
+		border-radius: 20px;
+		align-items: center;
+	}
 }
 
 .form_gmail {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-.form_gmail button {
-	width: 100%;
-	margin: 20px 0;
+	input {
+		box-shadow: 0 0 20px cyan;
+		border-radius: 20px;
+		padding: 0 20px;
+		margin: 20px 0;
+	}
+	button {
+		width: 100%;
+		margin: 20px 0;
+	}
 }
 
 /* MOVE BLOCK */
 
-.move_block {
-	background: black;
-	padding: 100px 0;
-	position: relative;
-}
-
-.parent_block {
-	height: 500px;
-	width: 500px;
-	border: 2px solid cyan;
-	position: relative;
-	margin: 0 auto;
-}
-
-.child_block {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	background: yellow;
-}
-
-.inner_move_block {
-	margin-top: 10px;
+.block {
+	&_move {
+		background: black;
+		padding: 100px 0;
+		position: relative;
+		&_inner {
+			padding-top: 20px;
+			margin-top: 10px;
+		}
+	}
+	&_parent {
+		height: 500px;
+		width: 500px;
+		border-radius: 25px;
+		border: 2px solid cyan;
+		position: relative;
+		margin: 0 auto;
+		box-shadow: 0 0 20px cyan;
+	}
+	&_child {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border: 3px dashed black;
+		border-radius: 50px;
+		background: white;
+		box-shadow: 0 0 15px 1px white,
+					0 0 10px cyan inset;
+	}
 }
 
 /* STOP WATCH */
+
+.stopwatch {
+	padding: 100px 0;
+	background: black;
+}
 
 .time {
 	color: white;
@@ -62,26 +77,60 @@
 	font-size: 80px;
 	height: 100px;
 	width: 100%;
-	border-bottom: 1px solid cyan;
 	margin-top: 40px;
-}
-
-.time_block {
-	display: flex;
-	width: 500px;
-	justify-content: space-between;
-}
-
-.stopwatch {
-	padding: 100px 0;
-	background: black;
-}
-
-.time_buttons {
-	margin-top: 30px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
+	&_block {
+		display: flex;
+		width: 500px;
+		text-shadow: 0 0 5px white;
+		justify-content: space-between;
+		div {
+			text-align: center;
+			width: 100px;
+		}
+	}
+	&_buttons {
+		margin-top: 30px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		button {
+			box-shadow: none;
+			border-radius: 0px;
+			border: 2px solid cyan;
+			width: 100px;
+			height: 100px;
+			box-shadow: 0 0 10px cyan inset,
+							0 0 10px cyan;
+			transition: 0.2s;
+		}
+		#start {
+			border-radius: 40px 0 0 40px;
+			border-right: 1px solid cyan;
+			&:hover {
+				transform: scale(1.05);
+				box-shadow: 0 0 10px cyan inset,
+							0 0 10px cyan;
+			}
+		}
+		#stop {
+			border-right: 1px solid cyan;
+			border-left: 1px solid cyan;
+            &:hover {
+				transform: scale(1.05);
+				box-shadow: 0 0 10px cyan inset,
+							0 0 10px cyan;
+			}
+        }
+		#reset {
+            border-radius: 0 40px 40px 0;
+			border-left: 1px solid cyan;
+			&:hover {
+				transform: scale(1.05);
+				box-shadow: 0 0 10px cyan inset,
+							0 0 10px cyan;
+			}
+        }
+	}
 }
 
 /* JSON */
@@ -101,17 +150,19 @@
 			gap: 20px;
 
 			&_user {
+				box-shadow: 0 0 10px cyan;
+				text-shadow: 0 0 10px white;
 				display: flex;
 				justify-content: space-around;
 				flex-direction: column;
 				align-items: center;
 				border: solid 2px cyan;
 				border-radius: 20px;
-
 				&_img {
 					margin: 20px;
 					height: 150px;
 					width: 150px;
+					box-shadow: 0 0 10px cyan;
 					border: solid 2px cyan;
 					border-radius: 100px;
 				}

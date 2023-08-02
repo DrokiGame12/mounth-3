@@ -98,7 +98,7 @@ requestPromise2.then(product => {
 //////////////////////////////////////////////////////////////////////////
 
 
-const url = 'https://jsonplaceholder.typicode.com/todos'				// API - Application Programming Interface
+const url = 'https://jsonplaceholder.typicode.com/todos'	// API - Application Programming Interface
 fetch(url)
 	.then(response => response.json())
 	.then(data => console.log(data))

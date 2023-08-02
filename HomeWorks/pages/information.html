@@ -15,7 +15,7 @@
 			<div class="header_inner">
 				<a href="../index.html">
 					<div class="header_inner_logotype">
-						<h2>JavaScript</h2>
+						<h3>JavaScript</h3>
 					</div>
 				</a>
 				<ul class="header_inner_menu">
@@ -24,6 +24,9 @@
 					</li>
 					<li class="header_inner_menu_link">
 						<a href="../pages/lessons.html">Lessons</a>
+					</li>
+					<li class="header_inner_menu_link">
+						<a href="../pages/cards.html">Cards</a>
 					</li>
 					<li class="header_inner_menu_link">
 						<a href="../pages/information.html">Information</a>
@@ -35,122 +38,15 @@
 	</div>
 	<div class="information">
 		<div class="container">
-			<div class="information_">
+			<div class="information_inner">
+				<div class="information_inner_menu">
+					<div class="information_inner_menu_input"><input type="text" id="input" placeholder="Search..."></div>
+					<div class="information_inner_menu_block" id="menu"></div>
+				</div>
 				
-			</div>
-
-			<h2>Time</h2>
-			<div class="information_block">
-				<div class="information_block_content">
-					<a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Asynchronous" target="_blank">
-						<h2>Асинхронность</h2>
-					</a>
-					<span>
-						<p><b>Асинхронность</b> — функция вызывается <b>через время,</b> мы не знаем, когда она отработает.</p>
-						<br>
-						<p><b>Двойная асинхронность</b> — используется <b>onclick</b>.</p>
-						<br>
-						<p><b>Асинхронная функция</b> — фунция, которая начнёт своё выполнение кода на <b>заднем фоне.</b></p>
-					</span>
-				</div>
-
-				<div class="information_block_content">
-					<a href="" target="_blank">
-						<h2>Синхронность</h2>
-					</a>
-					<span>
-						<p><b>Синхронность</b> — функция вызывается <b>мгновенно</b> без задержек.</p>
-						<br>
-						<p><b>Синхронная функция</b> — фунция, которая начнёт своё выполнение кода <b>сразу</b>.</p>
-					</span>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://developer.mozilla.org/ru/docs/Web/API/setTimeout" target="_blank">
-						<h2>setTimeout ( function, time )</h2>
-					</a>
-					<span>
-						<p><b>setTimeout</b> —  позволяет вызвать функцию <b>один раз</b> через определённый интервал времени.</p>
-						<br>
-						<p><b>function</b> — функция, которая вызовется <b>один раз</b>.</p>
-						<br>
-						<p><b>time</b> — интервал времени, через который вызоветься функция. <b>(1000 = 1 sec)</b></p>
-					</span>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://learn.javascript.ru/settimeout-setinterval" target="_blank">
-						<h2>setInterval ( function, time )</h2>
-					</a>
-					<span>
-						<p><b>setInterval</b> — позволяет вызывать функцию <b>регулярно</b>, повторяя вызов через определённый интервал времени.</p>
-						<br>
-						<p><b>function</b> — функция, которая будет вызываться <b>регулярно</b>.</p>
-						<br>
-						<p><b>time</b> — интервал времени, через который будет вызываться функция. <b>(1000 = 1 sec)</b><br></p>
-					</span>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout" target="_blank">
-						<h2>clearTimeout ( timer )</h2>
-					</a>
-					<span>
-						<p><b>clearTimeout</b> —  позволяет <b>остановить</b> таймер.</p>
-						<br>
-						<p><b>timer</b> — таймер, который нужно <b>остановить</b>.</p>
-					</span>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/clearInterval" target="_blank">
-						<h2>clearInterval ( timer )</h2>
-					</a>
-					<span>
-						<p><b>clearInterval</b> —  позволяет <b>остановить</b> таймер.</p>
-						<br>
-						<p><b>timer</b> — таймер, который нужно <b>остановить</b>.</p>
-					</span>
-				</div>
-			</div>
-
-
-			<h2>class List</h2>
-			<div class="information_block">
-				<div class="information_block_content">
-					<a href="https://doka.guide/js/element-classlist/#classlist.add" target="_blank">
-						<h2>add ( class )</h2>
-					</a>
-					<p><b>add</b> — метод, используемый для <b>добавления класса</b> к элементу.</p>
-					<br>
-					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>добавится</b>.</p>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://doka.guide/js/element-classlist/#classlist.remove" target="_blank">
-						<h2>remove ( class )</h2>
-					</a>
-					<p><b>remove</b> — метод, используемый для <b>удаления класса</b> у элемента.</p>
-					<br>
-					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>удалится</b>.</p>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://doka.guide/js/element-classlist/#classlist.remove" target="_blank">
-						<h2>replace ( class )</h2>
-					</a>
-					<p><b>replace</b> — метод, используемый для <b>замены класса</b> у элемента.</p>
-					<br>
-					<p><b>class</b> — строка с <b>именем класса</b>, которая <b>заменится</b>.</p>
-				</div>
-
-				<div class="information_block_content">
-					<a href="https://doka.guide/js/element-classlist/#:~:text=remove()&text=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82%D1%81%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0,%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D1%83%20%D1%81%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BC%20%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0." target="_blank">
-						<h2>contains ( class )</h2>
-					</a>
-					<p><b>contains</b> — метод, используемый для <b>проверки наличия</b> класса у элемента.</p>
-					<br>
-					<p><b>class</b> — строка с <b>именем класса</b>, наличие которого нужно <b>проверить</b>.</p>
+				<div class="information_inner_content" id="content">
+					<h4 id="dataTitle"><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">JavaScript</a></h4>
+					<div id="dataBody"><p><b>JavaScript</b> — это язык программирования, который используют для написания frontend- и backend-частей сайтов, а также мобильных приложений. Часто в текстах и обучающих материалах название языка сокращают до JS. Это язык программирования высокого уровня, то есть код на нем понятный и хорошо читается.</p></div>
 				</div>
 			</div>
 		</div>
@@ -163,7 +59,7 @@
 				</div>
 			</a>
 		</div>
-	</div>
+	
 </div>
 
 <div class="modal">
@@ -182,4 +78,5 @@
 
 </body>
 <script src="../js/modal.js"></script>
+<script src="../js/information.js"></script>
 </html>

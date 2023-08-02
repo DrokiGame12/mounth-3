@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Britannic Bold", sans-serif;
+    background: #c2d0d0;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    &-thumb {
+        background: linear-gradient(180deg, black, cyan, white, cyan, black);
+    }
+}
+  
+
+.btn {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    text-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px cyan;
+    &:hover {
+        text-shadow: 0 0 15px cyan;
+        box-shadow: 0 0 15px cyan;
+        background-color: rgba(0, 255, 255, 0.2);
+    }
+    &:active {
+        text-shadow: 0 0 10px cyan;
+        box-shadow: 0 0 20px cyan;
+        background-color: rgba(0, 255, 255, 0.5);
+    }
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 0 0 10px cyan;
+    &:hover{
+        color: white;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0 15px white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #2c2d2f;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0 10px white;
+}
+
+h4 {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0 15px white;
+}
+
+strong {
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+label {
+    font-size: 24px;
+    color: cyan;
+}
+
+input {
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 5px;
+    color: cyan;
+    background: black;
+    border: 2px solid cyan;
+}
+
+.checker {
+    color: white;
+    font-size: 30px;
+}
+
+.btn-slide {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: cyan;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    font-weight: 800;
+    z-index: 1;
+    &:hover {
+        background: darkcyan !important;
+        cursor: pointer;
+        color: white;
+    }
+}

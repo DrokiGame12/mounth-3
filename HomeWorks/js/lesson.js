@@ -13,9 +13,11 @@ phoneButton.onclick = () => {
 	if(phoneRegExp.test(phoneInput.value)){
 		phoneResult.innerHTML = 'Correct phone!'
 		phoneResult.style.color = 'green'
+		phoneResult.style.textShadow = '0 0 10px green'
 	} else {
 		phoneResult.innerHTML = 'Incorrect phone!'
 		phoneResult.style.color = 'red'
+		phoneResult.style.textShadow = '0 0 10px red'
 	}
 }
 
@@ -69,117 +71,49 @@ const tabInterval = setInterval(() => {
 //																		//
 //////////////////////////////////////////////////////////////////////////
 
-// const convert = (element) => {
-// 	const input = document.querySelector(`.${element}`)
-// 	input.oninput = () => {
-// 		const request = new XMLHttpRequest()
-// 		request.open('GET', '../data/convertor.json')
-// 		request.setRequestHeader('Content-type', 'application/json')
-// 		request.send()
-// 		request.onload = () => {
-// 			const response = JSON.parse(request.response)
+const currencies = ['tng',
+					'lkr',
+					'yen',
+					'rub',
+					'som',
+					'awg',
+					'usd',
+					'eur',
+					'gbp',
+					'bhd'
+				]
 
-// 			//	убрать, появляется автоматически
-// 			const som = response.som
-// 			const usd = response.usd
-// 			const eur = response.eur
-// 			const gbp = response.gbp
-// 			const somInput = document.querySelector('.som')
-// 			const usdInput = document.querySelector('.usd')
-// 			const eurInput = document.querySelector('.eur')
-// 			const gbpInput = document.querySelector('.gbp')
+async function convertorRequest(){
+	try {
+		const response = await fetch('../data/convertor.json')
+		const data = await response.json()
+		
+		for(const element of currencies){
+			console.log(`.${element}`);
+			const input = document.querySelector(`.${element}`)
+			input.oninput = () => {
+				const elementsCurren = {},
+					elementsInput = {}
+				for(let allElement of currencies){
+					elementsCurren[allElement] = data[allElement]
+					elementsInput[allElement] = document.querySelector(`.${allElement}`)
+				}
 
-// 			//	автоматизировать
-// 			if(input.value === ''){
-// 				somInput.value = ''
-// 				usdInput.value = ''
-// 				eurInput.value = ''
-// 				gbpInput.value = ''
-			
-// 			} else if(element === 'som'){
-// 				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-// 				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
-// 				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-// 			} else if(element === 'usd') {
-// 				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-// 				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
-// 				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-// 			} else if(element === 'eur') {
-// 				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-// 				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-// 				gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-// 			} else if(element === 'gbp') {
-// 				somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-// 				usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-// 				eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
-// 			}
-// 		}
-// 	}
-// }
-
-
-
-const convert = elements => {
-	for(let element in elements){
-		const input = document.querySelector(`.${element}`)
-		input.oninput = () => {
-			const request = new XMLHttpRequest()
-			request.open('GET', '../data/convertor.json')
-			request.setRequestHeader('Content-type', 'application/json')
-			request.send()
-			request.onload = () => {
-				const response = JSON.parse(request.response)
-
-				//	убрать, появляется автоматически
-
-				const som = eval(`response.${elements.som}`)
-				const usd = response.usd
-				const eur = response.eur
-				const gbp = response.gbp
-				const somInput = document.querySelector('.som')
-				const usdInput = document.querySelector('.usd')
-				const eurInput = document.querySelector('.eur')
-				const gbpInput = document.querySelector('.gbp')
-
-				//	автоматизировать
-				if(input.value === ''){
-					somInput.value = ''
-					usdInput.value = ''
-					eurInput.value = ''
-					gbpInput.value = ''
+				const inputValue = elementsInput[element].value
+				const currValue = elementsCurren[element]
+				delete elementsInput[element]
+				delete elementsCurren[element]
 				
-				} else if(element === 'som'){
-					usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-					eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
-					gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-				} else if(element === 'usd') {
-					somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-					eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
-					gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-				} else if(element === 'eur') {
-					somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-					usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-					gbpInput.value = (input.value * eval(`response.${element}`) / gbp).toFixed(2)
-				} else if(element === 'gbp') {
-					somInput.value = (input.value * eval(`response.${element}`) / som).toFixed(2)
-					usdInput.value = (input.value * eval(`response.${element}`) / usd).toFixed(2)
-					eurInput.value = (input.value * eval(`response.${element}`) / eur).toFixed(2)
+				for (const сurr in elementsCurren) {
+					input.value !== '' ? elementsInput[сurr].value = (inputValue * currValue / elementsCurren[сurr]).toFixed(2) : elementsInput[сurr].value = ''
 				}
 			}
 		}
+	} catch(error) {
+		console.warn('ERROR:', error.stack)
 	}
 }
-const currencies = {som: 'som', 
-					usd: 'usd', 
-					eur: 'eur', 
-					gbp: 'gbp'}
-// убрать
-convert(currencies)
-// convert('usd')
-// convert('eur')
-// convert('gbp')
-
-
+convertorRequest()
 
 //////////////////////////////////////////////////////////////////////////
 //																		//
@@ -191,32 +125,22 @@ const card = document.querySelector('.card')
 const btnNext = document.querySelector('#btn-next')
 const btnPrev = document.querySelector('#btn-prev')
 const border = document.querySelector('.card')
+
 let count = 1
 
-// btnNext.onclick = () => {
-// 	count++
-// 	fetch(`https://jsonplaceholder.typicode.com/todos/${count}`)
-// 		.then(response => response.json())
-// 		.then(data => {
-// 			card.innerHTML = `
-// 				<p>${data.title}</p>
-// 				<p style="color: ${data.completed === true ? 'green':'red'}">${data.completed}</p>
-// 				<span>${data.id}</span>
-// 			`
-// 		})
-// }
-
-const fetchCardById = index => {
-	fetch(`https://jsonplaceholder.typicode.com/todos/${index}`)
+const fetchCardById = (id = 1) => {
+	fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
 		.then(response => response.json())
 		.then(data => {
+			const color = String(data.completed === true ? 'lime':'red')
 			card.innerHTML = `
 				<p>${data.title}</p>
-				<p style="color: ${data.completed === true ? 'green':'red'}">${data.completed}</p>
+				<p style="color: ${color}; text-shadow: 0 0 10px ${color}">${data.completed}</p>
 				<span>${data.id}</span>
 			`
-			border.style.border = `2px solid ${data.completed === true ? 'green':'red'}`
-			border.style.boxShadow = `0 0 15px ${data.completed === true ? 'green':'red'}`
+
+			border.style.border = `2px solid ${data.completed === true ? 'lime':'red'}`
+			border.style.boxShadow = `0 0 15px ${data.completed === true ? 'lime':'red'}`
 		})
 }
 
@@ -236,3 +160,34 @@ fetchCardById(count)
 fetch('https://jsonplaceholder.typicode.com/posts')
 	.then(response => response.json())
 	.then(data => console.log(data))
+
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								WHEATHER API							//
+//																		//
+//////////////////////////////////////////////////////////////////////////
+
+const searchCity = document.querySelector('.searchCity')
+const cityTemp = document.querySelector('.cityTemp')
+const cityName = document.querySelector('.cityName')
+
+const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
+const apiKey = 'e417df62e04d3b1b111abeab19cea714'
+
+
+searchCity.oninput = async() => {
+    const response = await fetch(`${BASE_URL}?q=${searchCity.value}&appid=${apiKey}`)
+    const data = await response.json()
+    cityName.innerHTML = data?.name || '...'
+	cityTemp.innerHTML = data?.main?.temp ? `${Math.round(data?.main?.temp - 274)}&deg;C` : '...'
+}
+
+async function test(){
+	const response = await fetch('https://ipinfo.io?token=d4f19f73332858')
+	const data = await response.json()
+	const response2 = await fetch(`${BASE_URL}?q=${data.city}&appid=${apiKey}`)
+    const data2 = await response2.json()
+    cityName.innerHTML = data2?.name || '...'
+	cityTemp.innerHTML = data2?.main?.temp ? `${Math.round(data2?.main?.temp - 274)}&deg;C` : '...'
+}
+test()

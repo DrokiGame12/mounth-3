@@ -1,36 +1,44 @@
-/* PHONE CHECKER */
 .phone_block {
   background: black;
   padding: 100px 0;
 }
-
-.inner_phone_block {
+.phone_block_inner {
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid cyan;
+  box-shadow: 0 0 20px cyan;
+  border: 2px solid rgb(97, 104, 104);
   height: 300px;
   border-radius: 20px;
   align-items: center;
 }
-
-.form_phone {
+.phone_form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-shadow: 0 0 10px cyan;
 }
-
-.form_phone button {
+.phone_form input {
+  box-shadow: 0 0 10px cyan;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+.phone_form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.phone_form button {
   width: 100%;
   margin: 20px 0;
+  border: 1px solid cyan;
+}
+.phone_form button:hover {
+  background-color: rgba(0, 255, 255, 0.2);
 }
 
-/* TAB SLIDER */
 .tab_slider {
   background: black;
   padding: 100px 0;
 }
-
 .tab_content_block {
   width: 700px;
   border: 1px solid cyan;
@@ -42,13 +50,13 @@
   flex-direction: column;
   justify-content: center;
   height: 170px;
+  box-shadow: 0 0 20px cyan;
 }
 .tab_content_block p {
   color: white;
   margin-top: 10px;
   text-align: justify;
 }
-
 .tab_content_item {
   padding: 10px;
   height: 30px;
@@ -59,6 +67,7 @@
   cursor: pointer;
   display: grid;
   place-content: center;
+  box-shadow: 0 0 15px cyan;
 }
 .tab_content_items {
   width: 400px;
@@ -72,7 +81,6 @@
   font-weight: 600;
   border: 1px solid white;
 }
-
 .tab_contents_block {
   display: flex;
   justify-content: space-between;
@@ -80,7 +88,6 @@
   margin-top: 50px;
 }
 
-/*--------CONVENTOR--------*/
 .conventor {
   padding: 100px 0;
   background-color: black;
@@ -99,6 +106,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 0 15px cyan;
 }
 .conventor_inner_block input {
   border-radius: 20px;
@@ -109,7 +117,6 @@
   -webkit-appearance: none;
 }
 
-/*------CARD SWITCHER------*/
 .card {
   width: 500px;
   height: 150px;
@@ -139,4 +146,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.weather {
+  padding: 100px 0;
+  background-color: black;
+}
+.weather_inner {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.weather_inner input {
+  text-shadow: none;
+  box-shadow: 0 0 10px cyan;
+  border-radius: 10px;
+  padding: 10px;
+}
+.weather_inner_result {
+  margin-top: 30px;
+  text-shadow: 0 0 10px white;
+  color: white;
+  text-align: center;
+  font-size: 26px;
+}
+.weather_inner_result h5 {
+  font-size: 28px;
+  border-bottom: 2px solid cyan;
+  margin-bottom: 5px;
+  padding: 0 20px 5px 20px;
 }/*# sourceMappingURL=lessons.css.map */

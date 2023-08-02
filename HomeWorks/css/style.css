@@ -1,13 +1,16 @@
 /* HEADER */
 .header {
   height: 80px;
-  background: #2c2d2f;
+  background: black;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 255, 255, 0.5) 100%);
   display: flex;
   align-items: center;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 15px cyan;
 }
 .header_inner {
   height: 100%;
@@ -26,10 +29,15 @@
   width: -moz-fit-content;
   width: fit-content;
   background: cyan;
+  box-shadow: 0 0 10px cyan;
   padding: 8px;
-  color: white;
+  color: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.header_inner_logotype:hover {
+  box-shadow: 0 0 20px cyan;
+  text-shadow: 0 0 20px white;
 }
 .header_inner_menu {
   display: flex;
@@ -42,6 +50,7 @@
 }
 .header_inner_menu_link a:hover {
   text-decoration: underline;
+  text-shadow: 0 0 15px cyan;
 }
 
 /* MAIN BLOCK */
@@ -58,48 +67,27 @@
 }
 
 .btn-color {
+  text-shadow: 0 0 20px white;
   border-radius: 20px;
-  border-color: cyan !important;
 }
 
 /* FOOTER */
 .footer {
   background: #2c2d2f;
-  width: 100%;
+  padding: 30px 0;
 }
-
-.inner_footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-}
-
 .footer h2 {
   text-transform: uppercase;
   color: cyan;
   font-weight: 600;
 }
-
-/* SLIDER BLOCK */
-.slider_block {
-  padding: 100px 0;
-  background: black;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border: 3px solid cyan;
-  border-radius: 20px;
+.footer_inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
+  justify-content: center;
 }
 
+/* SLIDER BLOCK */
 .slide {
   position: absolute;
   top: 60px;
@@ -109,33 +97,60 @@
   display: none;
   transition: opacity 0.5s ease-in-out;
 }
-
 .slide_card {
   color: white;
   margin: 0 auto;
   width: 500px;
   text-align: center;
 }
-
 .slide_card h3 {
   color: white;
   text-transform: uppercase;
   font-size: 22px;
 }
-
 .slide_card p {
   font-size: 16px;
   text-align: justify;
   margin: 10px 0;
 }
-
 .slide_card a {
   color: cyan;
   text-decoration: underline;
 }
-
+.slide_card button {
+  background: red;
+}
 .slide.active_slide {
   display: block;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 3px solid cyan;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.slider button {
+  border: none;
+  box-shadow: 0 0 20px cyan;
+  transition: 0.1s;
+}
+.slider button:active {
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.1);
+}
+.slider_block {
+  padding: 100px 0;
+  background: black;
+}
+.slider_inner {
+  border-radius: 20px;
+  box-shadow: 0 0 20px cyan;
 }
 
 /* VIDEO BLOCK */
@@ -147,6 +162,11 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+.video_block_inner iframe {
+  border-radius: 20px;
+  border: 2px solid cyan;
+  box-shadow: 0 0 20px cyan;
 }
 
 /* MODAL */
@@ -161,16 +181,19 @@
   display: none;
 }
 .modal_dialog {
+  border-radius: 20px;
+  box-shadow: 0 0 20px cyan;
+  text-shadow: 0 0 10px white;
   max-width: 500px;
   margin: 150px auto;
 }
 .modal_dialog_content {
+  border-radius: 20px;
   position: relative;
   width: 100%;
   padding: 40px;
   background-color: black;
   border: 2px solid cyan;
-  border-radius: 4px;
   max-height: 80vh;
   overflow-y: auto;
 }
@@ -184,12 +207,16 @@
   top: 8px;
   right: 14px;
   font-size: 30px;
+  text-shadow: 0 0 10px red;
   color: red;
   opacity: 0.5;
   font-weight: 700;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+.modal_dialog_content_close:hover {
+  opacity: 1;
 }
 .modal_dialog_content_title {
   text-align: center;
@@ -198,6 +225,9 @@
   color: white;
 }
 .modal_dialog_content_input, .modal_dialog_content .btn_min {
+  border: 2px solid cyan;
   width: 100% !important;
   margin-top: 10px;
+  border-radius: 20px;
+  padding: 0 10px;
 }/*# sourceMappingURL=style.css.map */

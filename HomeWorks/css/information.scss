@@ -1,32 +1,126 @@
-.information {
-	padding: 100px 0;
-	background: black;
-	h2 {
-		color: white;
+.wrapper {
+	height: 100vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.header {
+		position:static;
 	}
-	&_block{
+	.information_inner {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		margin: 50px;
-		gap: 50px;
-		&_content {
+		grid-template-columns: 1fr 2.5fr;
+		grid-column-gap: 50px;
+		
+		&_menu {
+			height: 65vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			padding: 20px;
-			border: solid 2px cyan;
-			border-radius: 15px;
-			color: white;
-			
-			& h2 {
-				font-size: 32px;
-				text-transform: none;
-				color: cyan;
-				margin: 20px 0px;
-				&:hover {
-					color: rgb(150, 255, 255);
+			gap: 10px;
+			border: 2px solid cyan;
+			box-shadow: 0 0 20px cyan inset;
+			border-radius: 40px;
+			&_input input {
+				width: 100%;
+				border-radius: 20px;
+				box-shadow: 0 0 20px cyan;
+				padding: 10px;
+
+			}
+			&_block {
+				text-align: center;
+				overflow-y: scroll;
+				border-radius: 20px;
+				width: 100%;
+				color: white;
+				transition: 0.2s;
+				* {
+					transition: 0.2s;
+					padding: 14px;
+				}
+		
+				h4 {
+					box-shadow: 0 0 10px cyan;
+					border: 2px solid cyan;
+					border-radius: 20px;
+					cursor: pointer;
+					&:hover {
+			            background: darkcyan;
+						box-shadow: 0 0 15px cyan;
+						transform: scale(1.05);
+			        }
+					&:active{
+						background: cyan;
+						transform: scale(1.02);
+					}
+				}
+				&_titles {
+					display: none;
+					justify-content: space-around;
+					flex-direction: column;
+					margin: 10px 0;
+					padding-top: 0;
+					span {
+						border-bottom: 3px solid cyan;
+						border-radius: 20px;
+						font-weight: bold;
+						cursor: pointer;
+						&:hover {
+							text-decoration: solid;
+							text-shadow: 0 0 20px cyan;
+							transform: scale(1.1);
+			            }
+						&:active {
+							text-shadow: 0 0 40px cyan;
+			                transform: scale(1.05);
+						}
+					}
 				}
 			}
-			& p b {
-				color:cyan;
+		}
+
+		&_content {
+			overflow-y: scroll;
+			height: 65vh;
+			border: 2px solid cyan;
+			box-shadow: 0 0 20px cyan inset;
+			border-radius: 40px;
+			padding: 30px;
+			h4 a {
+				text-transform: none;
+				font-size: 44px;
+				text-shadow: 0 0 10px white;
+				color: white;
+				text-decoration: none;
+				&:hover{
+					color: cyan;
+					text-shadow: 0 0 20px cyan;
+				}
+			}
+			
+			div {
+				color: white;
+				display: block;
+				margin-top: 20px;
+				font-size: 22px;
+				p {
+					margin: 10px 0;
+					b {
+						color: cyan;
+						text-shadow: 0 0 10px cyan;
+					}
+				}
+				.error {
+					color: red;
+					text-shadow: 0 0 20px red;
+					font-size: 30px;
+					h5 {
+						font-size: 36px;
+					}
+				}
 			}
 		}
-	}
+	}	
 }

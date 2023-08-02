@@ -1,91 +1,117 @@
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								PHONE CHECKER							//
+//																		//
+//////////////////////////////////////////////////////////////////////////
 
-/* PHONE CHECKER */
 
-.phone_block {
-    background: black;
-    padding: 100px 0;
+.phone {
+	&_block {
+		background: black;
+		padding: 100px 0;
+		&_inner {
+			margin-top: 50px;
+			display: flex;
+			justify-content: space-evenly;
+			box-shadow: 0 0 20px cyan;
+			border: 2px solid rgb(97, 104, 104);
+			height: 300px;
+			border-radius: 20px;
+			align-items: center;
+		}
+	}
+	&_form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-shadow: 0 0 10px cyan;
+		input {
+			box-shadow: 0 0 10px cyan;
+			border-radius: 20px;
+			padding: 0 20px;
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+		}
+		button {
+			width: 100%;
+			margin: 20px 0;
+			border: 1px solid cyan;
+			&:hover {
+				background-color: rgba(0, 255, 255, 0.2);
+			}
+		}
+	}
 }
 
-.inner_phone_block {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    border: 1px solid cyan;
-    height: 300px;
-    border-radius: 20px;
-    align-items: center;
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								TAB SLIDER								//
+//																		//
+//////////////////////////////////////////////////////////////////////////
+
+.tab{ 
+	&_slider {
+		background: black;
+		padding: 100px 0;
+	}
+	&_content {
+		&_block {
+			width: 700px;
+			border: 1px solid cyan;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			height: 170px;
+			box-shadow: 0 0 20px cyan;
+			& p {
+				color: white;
+				margin-top: 10px;
+				text-align: justify;
+			}
+		}
+		&_item {
+			padding: 10px;
+			height: 30px;
+			color: white;
+			border: 1px solid cyan;
+			text-align: center;
+			font-size: 20px;
+			cursor: pointer;
+			display: grid;
+			place-content: center;
+			box-shadow: 0 0 15px cyan;
+			&s {
+				width: 400px;
+				display: flex;
+				flex-direction: column;
+				row-gap: 5px;
+			}
+			&_active {
+				background: cyan;
+				color: black;
+				font-weight: 600;
+				border: 1px solid white;
+			}
+		}
+		&s_block {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 50px;
+		}
+	}
 }
 
-.form_phone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form_phone button {
-    width: 100%;
-    margin: 20px 0;
-}
-
-/* TAB SLIDER */
-
-.tab_slider {
-    background: black;
-    padding: 100px 0;
-}
-
-.tab_content_block {
-    width: 700px;
-    border: 1px solid cyan;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 170px;
-
-    & p {
-        color: white;
-        margin-top: 10px;
-        text-align: justify;
-    }
-}
-
-.tab_content_item {
-    padding: 10px;
-    height: 30px;
-    color: white;
-    border: 1px solid cyan;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-    display: grid;
-    place-content: center;
-
-    &s {
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        row-gap: 5px;
-    }
-    &_active {
-        background: cyan;
-        color: black;
-        font-weight: 600;
-        border: 1px solid white;
-    }
-}
-
-.tab_contents_block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-}
-
-/*--------CONVENTOR--------*/
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								CONVENTOR							    //
+//																		//
+//////////////////////////////////////////////////////////////////////////
 
 .conventor {
     padding: 100px 0;
@@ -103,6 +129,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            box-shadow: 0 0 15px cyan;
             & input {
                 border-radius: 20px;
                 padding: 0px 30px;
@@ -116,7 +143,11 @@
     }
 }
 
-/*------CARD SWITCHER------*/
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								CARD SWICHER							//
+//																		//
+//////////////////////////////////////////////////////////////////////////
 
 .card {
     width: 500px;
@@ -146,5 +177,42 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+//																		//
+//								WHEATHER								//
+//																		//
+//////////////////////////////////////////////////////////////////////////
+
+.weather {
+    padding: 100px 0;
+    background-color: black;
+    &_inner {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & input {
+			text-shadow: none;
+			box-shadow: 0 0 10px cyan;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        &_result{
+            margin-top: 30px;
+			text-shadow: 0 0 10px white;
+            color: white;
+            text-align: center;
+            font-size: 26px;
+            h5 {
+                font-size: 28px;
+                border-bottom: 2px solid cyan;
+                margin-bottom: 5px;
+                padding: 0 20px 5px 20px;
+            }
+        }
     }
 }

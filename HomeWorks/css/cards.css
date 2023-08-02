@@ -1,0 +1,30 @@
+.cards {
+  padding: 100px 0;
+  background-color: black;
+}
+.cards_list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 500px;
+}
+.cards_list div {
+  padding: 40px;
+  box-shadow: 0 0 20px cyan;
+  border-radius: 20px;
+  border: 2px solid cyan;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cards_list div img {
+  border-radius: 50px;
+  box-shadow: 0 0 30px cyan;
+}
+.cards_list div h3 {
+  font-size: 24px;
+}/*# sourceMappingURL=cards.css.map */
